@@ -27,6 +27,11 @@
     [self.view addSubview:menu];
     _titles = @[@"第一列"];
     [self setUpAllChildControllers];
+    
+    
+    
+    ///////
+    
 }
 
 - (void)setUpAllChildControllers
