@@ -21,6 +21,7 @@
 		5A96C75E1EDD5E2400E309CF /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A96C75C1EDD5E2400E309CF /* FirstViewController.xib */; };
 		5AF249BB1EDE567000236D2F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF249B91EDE567000236D2F /* SecondViewController.m */; };
 		5AF249BC1EDE567000236D2F /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF249BA1EDE567000236D2F /* SecondViewController.xib */; };
+		84763CE890A9F55D7944D7BD /* libPods-DYPCustomPullDownMenuDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CC780C2AB8516AFD03CA40 /* libPods-DYPCustomPullDownMenuDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F1DF875302CC72DE22672B1 /* Pods-DYPCustomPullDownMenuDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYPCustomPullDownMenuDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYPCustomPullDownMenuDemo/Pods-DYPCustomPullDownMenuDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		27CC780C2AB8516AFD03CA40 /* libPods-DYPCustomPullDownMenuDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DYPCustomPullDownMenuDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A96C70E1EDD102E00E309CF /* DYPCustomPullDownMenuDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYPCustomPullDownMenuDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A96C7121EDD102E00E309CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5A96C7141EDD102E00E309CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +70,7 @@
 		5AF249B81EDE567000236D2F /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		5AF249B91EDE567000236D2F /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		5AF249BA1EDE567000236D2F /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		DB88553DADE61FAF2EFB8EBD /* Pods-DYPCustomPullDownMenuDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYPCustomPullDownMenuDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYPCustomPullDownMenuDemo/Pods-DYPCustomPullDownMenuDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84763CE890A9F55D7944D7BD /* libPods-DYPCustomPullDownMenuDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +106,8 @@
 				5A96C72A1EDD102E00E309CF /* DYPCustomPullDownMenuDemoTests */,
 				5A96C7351EDD102E00E309CF /* DYPCustomPullDownMenuDemoUITests */,
 				5A96C70F1EDD102E00E309CF /* Products */,
+				BA3714A34FC39A72B920078D /* Pods */,
+				C3C50A4E01458900F841AB71 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,6 +181,23 @@
 			path = DYPPullDownMenu;
 			sourceTree = "<group>";
 		};
+		BA3714A34FC39A72B920078D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F1DF875302CC72DE22672B1 /* Pods-DYPCustomPullDownMenuDemo.debug.xcconfig */,
+				DB88553DADE61FAF2EFB8EBD /* Pods-DYPCustomPullDownMenuDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C3C50A4E01458900F841AB71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27CC780C2AB8516AFD03CA40 /* libPods-DYPCustomPullDownMenuDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,9 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A96C73B1EDD102E00E309CF /* Build configuration list for PBXNativeTarget "DYPCustomPullDownMenuDemo" */;
 			buildPhases = (
+				A710B01A7CA9A6104FAB5C77 /* [CP] Check Pods Manifest.lock */,
 				5A96C70A1EDD102E00E309CF /* Sources */,
 				5A96C70B1EDD102E00E309CF /* Frameworks */,
 				5A96C70C1EDD102E00E309CF /* Resources */,
+				EFC679CE42B62FB45306E37C /* [CP] Embed Pods Frameworks */,
+				A4448C22AE3F29373842D5B3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -304,6 +331,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A4448C22AE3F29373842D5B3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DYPCustomPullDownMenuDemo/Pods-DYPCustomPullDownMenuDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A710B01A7CA9A6104FAB5C77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EFC679CE42B62FB45306E37C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DYPCustomPullDownMenuDemo/Pods-DYPCustomPullDownMenuDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5A96C70A1EDD102E00E309CF /* Sources */ = {
@@ -463,6 +538,7 @@
 		};
 		5A96C73C1EDD102E00E309CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F1DF875302CC72DE22672B1 /* Pods-DYPCustomPullDownMenuDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HU7CX6V97R;
@@ -476,6 +552,7 @@
 		};
 		5A96C73D1EDD102E00E309CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB88553DADE61FAF2EFB8EBD /* Pods-DYPCustomPullDownMenuDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HU7CX6V97R;
