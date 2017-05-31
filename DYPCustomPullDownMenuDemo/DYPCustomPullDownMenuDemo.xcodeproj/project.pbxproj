@@ -21,6 +21,8 @@
 		5A96C75E1EDD5E2400E309CF /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A96C75C1EDD5E2400E309CF /* FirstViewController.xib */; };
 		5AF249BB1EDE567000236D2F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF249B91EDE567000236D2F /* SecondViewController.m */; };
 		5AF249BC1EDE567000236D2F /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF249BA1EDE567000236D2F /* SecondViewController.xib */; };
+		5AF249E31EDEB0B200236D2F /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF249E21EDEB0B200236D2F /* UIView+Frame.m */; };
+		5AF249E61EDEBA6D00236D2F /* ImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF249E51EDEBA6D00236D2F /* ImageButton.m */; };
 		84763CE890A9F55D7944D7BD /* libPods-DYPCustomPullDownMenuDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CC780C2AB8516AFD03CA40 /* libPods-DYPCustomPullDownMenuDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,10 @@
 		5AF249B81EDE567000236D2F /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		5AF249B91EDE567000236D2F /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		5AF249BA1EDE567000236D2F /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		5AF249E11EDEB0B200236D2F /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		5AF249E21EDEB0B200236D2F /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		5AF249E41EDEBA6C00236D2F /* ImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageButton.h; sourceTree = "<group>"; };
+		5AF249E51EDEBA6D00236D2F /* ImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageButton.m; sourceTree = "<group>"; };
 		DB88553DADE61FAF2EFB8EBD /* Pods-DYPCustomPullDownMenuDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYPCustomPullDownMenuDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYPCustomPullDownMenuDemo/Pods-DYPCustomPullDownMenuDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +130,7 @@
 		5A96C7101EDD102E00E309CF /* DYPCustomPullDownMenuDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5AF249E01EDEB07800236D2F /* Category */,
 				5A96C7531EDD116200E309CF /* DYPPullDownMenu */,
 				5A96C7141EDD102E00E309CF /* AppDelegate.h */,
 				5A96C7151EDD102E00E309CF /* AppDelegate.m */,
@@ -179,6 +186,17 @@
 				5A96C7571EDD116200E309CF /* DYPPullDownMenu.m */,
 			);
 			path = DYPPullDownMenu;
+			sourceTree = "<group>";
+		};
+		5AF249E01EDEB07800236D2F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5AF249E11EDEB0B200236D2F /* UIView+Frame.h */,
+				5AF249E21EDEB0B200236D2F /* UIView+Frame.m */,
+				5AF249E41EDEBA6C00236D2F /* ImageButton.h */,
+				5AF249E51EDEBA6D00236D2F /* ImageButton.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		BA3714A34FC39A72B920078D /* Pods */ = {
@@ -385,11 +403,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF249E31EDEB0B200236D2F /* UIView+Frame.m in Sources */,
 				5A96C7581EDD116200E309CF /* DYPClickCover.m in Sources */,
 				5A96C75D1EDD5E2400E309CF /* FirstViewController.m in Sources */,
 				5A96C7191EDD102E00E309CF /* ViewController.m in Sources */,
 				5AF249BB1EDE567000236D2F /* SecondViewController.m in Sources */,
 				5A96C7161EDD102E00E309CF /* AppDelegate.m in Sources */,
+				5AF249E61EDEBA6D00236D2F /* ImageButton.m in Sources */,
 				5A96C7591EDD116200E309CF /* DYPPullDownMenu.m in Sources */,
 				5A96C7131EDD102E00E309CF /* main.m in Sources */,
 			);

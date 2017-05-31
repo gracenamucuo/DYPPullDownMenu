@@ -144,7 +144,6 @@ NSString *const DYPUpdateMenuTitleNoti = @"DYPUpdateMenuTitleNoti";
         [self dismiss];
         
         [btn setTitle:note.userInfo[@"title"] forState:UIControlStateNormal];
-        
         if ([self.delegate respondsToSelector:@selector(pullDownMenu:didSelectedColumn:info:row:)]) {
             [self.delegate pullDownMenu:self didSelectedColumn:col info:note.userInfo[@"title"] row:[note.userInfo[@"row"] integerValue]];
         }

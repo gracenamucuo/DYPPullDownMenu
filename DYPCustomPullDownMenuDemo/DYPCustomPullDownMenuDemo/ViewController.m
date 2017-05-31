@@ -10,6 +10,7 @@
 #import "DYPPullDownMenu.h"
 #import "FirstViewController.h"
 #import "SecondViewController.h"
+#import "ImageButton.h"
 #define DYPScreenW [UIScreen mainScreen].bounds.size.width
 #define DYPScreenH [UIScreen mainScreen].bounds.size.height
 @interface ViewController ()<DYPPullDownMenuDataSource,DYPPullDownMenuDelegate>
@@ -57,9 +58,10 @@
 
 - (UIButton*)pullDownMenu:(DYPPullDownMenu *)pullDownMenu buttonForColumnAtIndex:(NSInteger)index
 {
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    ImageButton *btn = [ImageButton buttonWithType:UIButtonTypeCustom];
     [btn setTitle:_titles[index] forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:@"shortStaffPullRepoIcon"] forState:UIControlStateNormal];
     return btn;
 }
 
