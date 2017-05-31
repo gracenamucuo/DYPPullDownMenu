@@ -543,9 +543,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HU7CX6V97R;
 				INFOPLIST_FILE = DYPCustomPullDownMenuDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.weyee.storage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weyee.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -557,9 +557,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HU7CX6V97R;
 				INFOPLIST_FILE = DYPCustomPullDownMenuDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.weyee.storage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weyee.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

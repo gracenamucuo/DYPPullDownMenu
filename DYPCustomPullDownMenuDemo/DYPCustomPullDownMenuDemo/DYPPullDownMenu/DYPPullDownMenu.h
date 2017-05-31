@@ -60,7 +60,7 @@
  @param column 点击的列
  @param info 点击的行的内容
  */
-- (void)pullDownMenu:(DYPPullDownMenu*)pullDownMenu didSelectedColumn:(NSInteger)column info:(NSString*)info;
+- (void)pullDownMenu:(DYPPullDownMenu*)pullDownMenu didSelectedColumn:(NSInteger)column info:(NSString*)info row:(NSInteger)row;
 
 @end
 

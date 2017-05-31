@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.view.backgroundColor = [UIColor brownColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     DYPPullDownMenu *menu = [[DYPPullDownMenu alloc]init];
   
     menu.frame = CGRectMake(0, 20, DYPScreenW, 44);
@@ -30,10 +30,6 @@
     [self.view addSubview:menu];
     _titles = @[@"第一列",@"第二列"];
     [self setUpAllChildControllers];
-    
-    
-    
-    ///////
     
 }
 
@@ -63,7 +59,7 @@
 {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setTitle:_titles[index] forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     return btn;
 }
 
@@ -85,9 +81,9 @@
 }
 
 #pragma mark -- DYPPullDownMenuDelegate
-- (void)pullDownMenu:(DYPPullDownMenu *)pullDownMenu didSelectedColumn:(NSInteger)column info:(NSString *)info
+- (void)pullDownMenu:(DYPPullDownMenu *)pullDownMenu didSelectedColumn:(NSInteger)column info:(NSString *)info row:(NSInteger)row
 {
-    NSLog(@"第%ld列--%@",column,info);
+    NSLog(@"第%ld列--%@--%ld",(long)column,info,(long)row);
 }
 
 

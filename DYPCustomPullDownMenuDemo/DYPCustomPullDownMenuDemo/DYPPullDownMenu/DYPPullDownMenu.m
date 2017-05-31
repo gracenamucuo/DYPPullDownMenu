@@ -133,8 +133,8 @@ NSString *const DYPUpdateMenuTitleNoti = @"DYPUpdateMenuTitleNoti";
 {
     self.backgroundColor = [UIColor whiteColor];
     _splitLineTopMargin = 10;
-    _splitLineColor = [UIColor redColor];
-    _coverColor = [UIColor colorWithWhite:1 alpha:0.7];
+    _splitLineColor = [UIColor lightGrayColor];
+    _coverColor = [UIColor colorWithWhite:0 alpha:0.3];
     
     _observer = [[NSNotificationCenter defaultCenter]addObserverForName:DYPUpdateMenuTitleNoti object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
         NSInteger col = [self.controllers indexOfObject:note.object];
@@ -143,16 +143,16 @@ NSString *const DYPUpdateMenuTitleNoti = @"DYPUpdateMenuTitleNoti";
         
         [self dismiss];
         
-        NSArray *allValues = note.userInfo.allValues;
+//        NSArray *allValues = note.userInfo.allValues;
         
-        if (allValues.count > 1 || [allValues.firstObject isKindOfClass:[NSArray class]]) {
-            return ;
-        }
+//        if (allValues.count > 1 || [allValues.firstObject isKindOfClass:[NSArray class]]) {
+//            return ;
+//        }
         
-        [btn setTitle:allValues.firstObject forState:UIControlStateNormal];
+        [btn setTitle:note.userInfo[@"title"] forState:UIControlStateNormal];
         
         if ([self.delegate respondsToSelector:@selector(pullDownMenu:didSelectedColumn:info:)]) {
-            [self.delegate pullDownMenu:self didSelectedColumn:col info:allValues.firstObject];
+            [self.delegate pullDownMenu:self didSelectedColumn:col info:note.userInfo[@"title"] row:[note.userInfo[@"row"] integerValue]];
         }
     }];
 }

@@ -56,14 +56,14 @@ static NSString *const rightCellID = @"rightCellID";
 {
     if (tableView == self.leftTable) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:leftCellID];
-        cell.textLabel.text = [NSString stringWithFormat:@"左%ld",indexPath.row];
+        cell.textLabel.text = [NSString stringWithFormat:@"左%ld",(long)indexPath.row];
         
         return cell;
     }
     
     if (tableView == self.rightTable) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:rightCellID];
-        cell.textLabel.text = [NSString stringWithFormat:@"%@:右边%ld",_selectedLeft,indexPath.row];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@:右边%ld",_selectedLeft,(long)indexPath.row];
         return cell;
     }
     return nil;
@@ -80,7 +80,7 @@ static NSString *const rightCellID = @"rightCellID";
     }
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    [[NSNotificationCenter defaultCenter]postNotificationName:DYPUpdateMenuTitleNoti object:self userInfo:@{@"title":cell.textLabel.text}];
+    [[NSNotificationCenter defaultCenter]postNotificationName:DYPUpdateMenuTitleNoti object:self userInfo:@{@"title":cell.textLabel.text,@"row":@(indexPath.row)}];
     _rightSelectedIndex = indexPath.row;
     
 //    if (self.firstSelectBlock) {

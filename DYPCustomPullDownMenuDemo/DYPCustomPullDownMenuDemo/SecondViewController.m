@@ -40,7 +40,7 @@ static NSString *cellID = @"cellID";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"second第%ld个",indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"second第%ld个",(long)indexPath.row];
     
     return cell;
 }
@@ -48,7 +48,7 @@ static NSString *cellID = @"cellID";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    [[NSNotificationCenter defaultCenter]postNotificationName:DYPUpdateMenuTitleNoti object:self userInfo:@{@"title":cell.textLabel.text}];
+    [[NSNotificationCenter defaultCenter]postNotificationName:DYPUpdateMenuTitleNoti object:self userInfo:@{@"title":cell.textLabel.text,@"row":@(indexPath.row)}];
     _selectedIndex = indexPath.row;
 //    if (self.secondSelectBlock) {
 //        self.secondSelectBlock(cell.textLabel.text);
