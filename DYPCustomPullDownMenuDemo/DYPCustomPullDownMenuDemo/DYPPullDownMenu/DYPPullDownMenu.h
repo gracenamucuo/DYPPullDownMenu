@@ -18,6 +18,7 @@
  @param pullDownMenu 下拉菜单
  @return 列数
  */
+@required
 - (NSInteger)numberOfColumnsInMenu:(DYPPullDownMenu*)pullDownMenu;
 
 
@@ -28,6 +29,7 @@
  @param index 列的索引
  @return 返回按钮
  */
+@required
 - (UIButton*)pullDownMenu:(DYPPullDownMenu*)pullDownMenu buttonForColumnAtIndex:(NSInteger)index;
 
 
@@ -38,6 +40,7 @@
  @param index 索引
  @return 返回对应的控制器。
  */
+@required
 - (UIViewController*)pullDownMenu:(DYPPullDownMenu*)pullDownMenu viewControllerForColumnAtIndex:(NSInteger)index;
 
 /**
@@ -47,6 +50,7 @@
  @param index 索引
  @return 高度
  */
+@required
 - (CGFloat)pullDownMenu:(DYPPullDownMenu*)pullDownMenu heightForColumnAtIndex:(NSInteger)index;
 
 @end

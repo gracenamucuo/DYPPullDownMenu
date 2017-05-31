@@ -143,15 +143,9 @@ NSString *const DYPUpdateMenuTitleNoti = @"DYPUpdateMenuTitleNoti";
         
         [self dismiss];
         
-//        NSArray *allValues = note.userInfo.allValues;
-        
-//        if (allValues.count > 1 || [allValues.firstObject isKindOfClass:[NSArray class]]) {
-//            return ;
-//        }
-        
         [btn setTitle:note.userInfo[@"title"] forState:UIControlStateNormal];
         
-        if ([self.delegate respondsToSelector:@selector(pullDownMenu:didSelectedColumn:info:)]) {
+        if ([self.delegate respondsToSelector:@selector(pullDownMenu:didSelectedColumn:info:row:)]) {
             [self.delegate pullDownMenu:self didSelectedColumn:col info:note.userInfo[@"title"] row:[note.userInfo[@"row"] integerValue]];
         }
     }];
