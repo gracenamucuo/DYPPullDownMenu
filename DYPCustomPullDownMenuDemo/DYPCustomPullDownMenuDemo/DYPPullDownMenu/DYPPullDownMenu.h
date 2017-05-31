@@ -51,6 +51,19 @@
 
 @end
 
+@protocol DYPPullDownMenuDelegate <NSObject>
+
+/**
+ 点击了下拉列表
+
+ @param pullDownMenu 下拉菜单
+ @param column 点击的列
+ @param info 点击的行的内容
+ */
+- (void)pullDownMenu:(DYPPullDownMenu*)pullDownMenu didSelectedColumn:(NSInteger)column info:(NSString*)info;
+
+@end
+
 
 extern NSString *const DYPUpdateMenuTitleNoti;
 
@@ -62,6 +75,11 @@ extern NSString *const DYPUpdateMenuTitleNoti;
  下拉菜单数据源
  */
 @property (nonatomic,weak)id<DYPPullDownMenuDataSource>dataSource;
+
+/**
+ 下拉菜单代理
+ */
+@property (nonatomic,weak)id<DYPPullDownMenuDelegate> delegate;
 
 /**
  分割线颜色

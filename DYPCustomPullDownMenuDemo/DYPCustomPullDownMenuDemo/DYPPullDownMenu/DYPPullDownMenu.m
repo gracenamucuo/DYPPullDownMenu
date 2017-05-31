@@ -128,6 +128,7 @@ NSString *const DYPUpdateMenuTitleNoti = @"DYPUpdateMenuTitleNoti";
     return self;
 }
 
+
 - (void)setUp
 {
     self.backgroundColor = [UIColor whiteColor];
@@ -149,6 +150,10 @@ NSString *const DYPUpdateMenuTitleNoti = @"DYPUpdateMenuTitleNoti";
         }
         
         [btn setTitle:allValues.firstObject forState:UIControlStateNormal];
+        
+        if ([self.delegate respondsToSelector:@selector(pullDownMenu:didSelectedColumn:info:)]) {
+            [self.delegate pullDownMenu:self didSelectedColumn:col info:allValues.firstObject];
+        }
     }];
 }
 
@@ -162,7 +167,7 @@ NSString *const DYPUpdateMenuTitleNoti = @"DYPUpdateMenuTitleNoti";
     CGFloat btnH = self.bounds.size.height;
     for (NSInteger i = 0; i < count; i++) {
         UIButton *btn = self.menuButtons[i];
-        btnX = i *btnW;
+        btnX = i * btnW;
         btn.frame = CGRectMake(btnX, btnY, btnW, btnH);
         if (i < count - 1) {
             UIView *splite = self.spliteLines[i];

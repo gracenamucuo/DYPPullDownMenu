@@ -16,6 +16,7 @@ static NSString *const rightCellID = @"rightCellID";
 @property (nonatomic,strong)NSString *selectedLeft;
 @property (nonatomic,assign)NSInteger selectedIndex;
 @property (nonatomic,assign)NSInteger rightSelectedIndex;
+
 @end
 
 @implementation FirstViewController
@@ -70,17 +71,22 @@ static NSString *const rightCellID = @"rightCellID";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     if (tableView == self.leftTable) {
         UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         _selectedLeft = cell.textLabel.text;
         _selectedIndex = indexPath.row;
-        
         return;
     }
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     [[NSNotificationCenter defaultCenter]postNotificationName:DYPUpdateMenuTitleNoti object:self userInfo:@{@"title":cell.textLabel.text}];
     _rightSelectedIndex = indexPath.row;
+    
+//    if (self.firstSelectBlock) {
+//        self.firstSelectBlock(cell.textLabel.text);
+//    }
+    
     [self.rightTable reloadData];
 }
 - (void)didReceiveMemoryWarning {

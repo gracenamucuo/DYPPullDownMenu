@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^firstSelectBlock)(NSString *str);
+
 @interface FirstViewController : UIViewController
+
+@property (nonatomic,copy)firstSelectBlock firstSelectBlock;
 
 @end

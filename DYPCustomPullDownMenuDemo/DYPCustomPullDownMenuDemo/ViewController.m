@@ -9,9 +9,10 @@
 #import "ViewController.h"
 #import "DYPPullDownMenu.h"
 #import "FirstViewController.h"
+#import "SecondViewController.h"
 #define DYPScreenW [UIScreen mainScreen].bounds.size.width
 #define DYPScreenH [UIScreen mainScreen].bounds.size.height
-@interface ViewController ()<DYPPullDownMenuDataSource>
+@interface ViewController ()<DYPPullDownMenuDataSource,DYPPullDownMenuDelegate>
 @property (nonatomic,strong)NSArray *titles;
 @end
 
@@ -22,10 +23,12 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor brownColor];
     DYPPullDownMenu *menu = [[DYPPullDownMenu alloc]init];
+  
     menu.frame = CGRectMake(0, 20, DYPScreenW, 44);
     menu.dataSource = self;
+    menu.delegate = self;
     [self.view addSubview:menu];
-    _titles = @[@"第一列"];
+    _titles = @[@"第一列",@"第二列"];
     [self setUpAllChildControllers];
     
     
@@ -38,11 +41,22 @@
 {
     FirstViewController *firstVC = [[FirstViewController alloc]init];
     [self addChildViewController:firstVC];
+//    firstVC.firstSelectBlock = ^(NSString *str) {
+//        NSLog(@"第一列打印");
+//    };
+    
+    SecondViewController *secondVC = [[SecondViewController alloc]init];
+    [self addChildViewController:secondVC];
+//    secondVC.secondSelectBlock = ^(NSString *str) {
+//        NSLog(@"第二列打印");
+//    };
 }
+
+#pragma mark -- DYPPullDownMenuDataDource
 
 - (NSInteger)numberOfColumnsInMenu:(DYPPullDownMenu *)pullDownMenu
 {
-    return 1;
+    return 2;
 }
 
 - (UIButton*)pullDownMenu:(DYPPullDownMenu *)pullDownMenu buttonForColumnAtIndex:(NSInteger)index
@@ -63,13 +77,19 @@
     if (index == 0) {
         return 400.f;
     }
+    
+    if (index == 1) {
+        return 300.f;
+    }
     return 0.f;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark -- DYPPullDownMenuDelegate
+- (void)pullDownMenu:(DYPPullDownMenu *)pullDownMenu didSelectedColumn:(NSInteger)column info:(NSString *)info
+{
+    NSLog(@"第%ld列--%@",column,info);
 }
+
 
 
 @end

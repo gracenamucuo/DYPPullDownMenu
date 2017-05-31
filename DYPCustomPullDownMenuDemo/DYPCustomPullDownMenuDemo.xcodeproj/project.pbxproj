@@ -19,6 +19,8 @@
 		5A96C7591EDD116200E309CF /* DYPPullDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A96C7571EDD116200E309CF /* DYPPullDownMenu.m */; };
 		5A96C75D1EDD5E2400E309CF /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A96C75B1EDD5E2400E309CF /* FirstViewController.m */; };
 		5A96C75E1EDD5E2400E309CF /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A96C75C1EDD5E2400E309CF /* FirstViewController.xib */; };
+		5AF249BB1EDE567000236D2F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF249B91EDE567000236D2F /* SecondViewController.m */; };
+		5AF249BC1EDE567000236D2F /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF249BA1EDE567000236D2F /* SecondViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,9 @@
 		5A96C75A1EDD5E2400E309CF /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		5A96C75B1EDD5E2400E309CF /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		5A96C75C1EDD5E2400E309CF /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+		5AF249B81EDE567000236D2F /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		5AF249B91EDE567000236D2F /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		5AF249BA1EDE567000236D2F /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +130,9 @@
 				5A96C75A1EDD5E2400E309CF /* FirstViewController.h */,
 				5A96C75B1EDD5E2400E309CF /* FirstViewController.m */,
 				5A96C75C1EDD5E2400E309CF /* FirstViewController.xib */,
+				5AF249B81EDE567000236D2F /* SecondViewController.h */,
+				5AF249B91EDE567000236D2F /* SecondViewController.m */,
+				5AF249BA1EDE567000236D2F /* SecondViewController.xib */,
 			);
 			path = DYPCustomPullDownMenuDemo;
 			sourceTree = "<group>";
@@ -233,6 +241,7 @@
 				TargetAttributes = {
 					5A96C70D1EDD102E00E309CF = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = HU7CX6V97R;
 						ProvisioningStyle = Automatic;
 					};
 					5A96C7261EDD102E00E309CF = {
@@ -276,6 +285,7 @@
 				5A96C71E1EDD102E00E309CF /* Assets.xcassets in Resources */,
 				5A96C71C1EDD102E00E309CF /* Main.storyboard in Resources */,
 				5A96C75E1EDD5E2400E309CF /* FirstViewController.xib in Resources */,
+				5AF249BC1EDE567000236D2F /* SecondViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +313,7 @@
 				5A96C7581EDD116200E309CF /* DYPClickCover.m in Sources */,
 				5A96C75D1EDD5E2400E309CF /* FirstViewController.m in Sources */,
 				5A96C7191EDD102E00E309CF /* ViewController.m in Sources */,
+				5AF249BB1EDE567000236D2F /* SecondViewController.m in Sources */,
 				5A96C7161EDD102E00E309CF /* AppDelegate.m in Sources */,
 				5A96C7591EDD116200E309CF /* DYPPullDownMenu.m in Sources */,
 				5A96C7131EDD102E00E309CF /* main.m in Sources */,
@@ -454,9 +465,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
 				INFOPLIST_FILE = DYPCustomPullDownMenuDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = daiyunpeng.DYPCustomPullDownMenuDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weyee.storage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -465,9 +478,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
 				INFOPLIST_FILE = DYPCustomPullDownMenuDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = daiyunpeng.DYPCustomPullDownMenuDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weyee.storage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
